@@ -15,6 +15,10 @@ class Triangle
       raise TriangleError
     elsif @s1 + @s2 <= @s3
       raise TriangleError
+    elsif @s1 + @s3 <= @s2
+      raise TriangleError
+    elsif @s3 + @s2 <= @s1
+      raise TriangleError
     elsif @s1 == @s2 && @s2 == @s3
       return :equilateral
     elsif @s1 == @s2 || @s1 == @s2 || @s2 == @s3 || @s1 == @s3
