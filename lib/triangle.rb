@@ -13,7 +13,7 @@ class Triangle
   def kind
     if (@s1 || @s2 || @s3) == 0
       raise TriangleError
-    elsif (@s1 || @s2 || @s3)
+    elsif @s1 + @s2 <= @s3
       raise TriangleError
     elsif @s1 == @s2 && @s2 == @s3
       return :equilateral
